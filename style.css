@@ -1,0 +1,95 @@
+/* basic */
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+/* welcome text */
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text {
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: chocolate;
+}
+/* playground */
+.ac-play {
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  background-image: url("./images/ac-bg.jpeg");
+  background-size: cover;
+}
+/* mario */
+#mario {
+  position: relative;
+  top: 145px;
+  background-image: url(./images/mario.png);
+  background-size: cover;
+  width: 55px;
+  height: 55px;
+}
+.animate {
+  animation: jump 0.3s linear;
+}
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 100px;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+/* barrier */
+#barrier {
+  position: relative;
+  top: 121px;
+  left: 500px;
+  animation: block 1s infinite linear;
+  background-image: url(./images/turtleBarrier.png);
+  background-size: cover;
+  width: 54px;
+  height: 32px;
+}
+@keyframes block {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+p {
+  text-align: center;
+}
